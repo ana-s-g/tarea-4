@@ -1,11 +1,19 @@
 package cuentas;
 
+/**
+ * 
+ * @author Ana Martín Álvarez
+ */
 public class Main {
 
     public static void main(String[] args) {
        operativa_cuenta(5);
      } 
     
+    /**
+     * gestiona la logica de la operativa de la cuenta 
+     * @param cantidad no se usa
+     */
     public static void operativa_cuenta(float cantidad) {
         CCuenta cuenta1;
         double saldoActual;

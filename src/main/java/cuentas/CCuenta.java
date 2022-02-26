@@ -1,5 +1,9 @@
 package cuentas;
 
+/**
+ * 
+ * @author Ana Martín Álvarez
+ */
 public class CCuenta {
 
     /**
@@ -64,10 +68,19 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Constructor de la clase
+     */
     public CCuenta()
     {
     }
-
+    
+    /**
+     * Constructor de la clase con parámetros
+     * @param nom nombre del cliente
+     * @param cue numero de cuenta
+     * @param sal saldo inicial
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -75,11 +88,19 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * @return devuelve el saldo actual
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * ingresa la cantidad pasada por parametros siempre que sea mayor que 0
+     * @param cantidad cantidad a ingresar
+     * @throws Exception si la cantidad a ingresar es menor que 0
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -87,6 +108,13 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * resta la cantidad al saldo existe y actualiza la cantidad saldo 
+     * con el resultado obtenido 
+     * @param cantidad cantidad a ingresar 
+     * @throws Exception  si la cantidad a ingresar es menor o igual a 0 o el
+     * resultado de la resta de cantidad y saldo es menora al saldo existente
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
